@@ -152,7 +152,7 @@ const SearchOrganization = () => {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-4">Search Organizations</h1>
           <p className="text-muted-foreground max-w-3xl">
-            Find organizations that are part of Vidyanjali Seva Sahyog and discover their ongoing activities and requests.
+            Find organizations that are part of PANKHUDI and discover their ongoing activities and requests.
           </p>
         </div>
         
@@ -174,7 +174,7 @@ const SearchOrganization = () => {
                   <SelectValue placeholder="State" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All States</SelectItem>
+                  <SelectItem value="all_states">All States</SelectItem>
                   <SelectItem value="Delhi">Delhi</SelectItem>
                   <SelectItem value="Maharashtra">Maharashtra</SelectItem>
                   <SelectItem value="Karnataka">Karnataka</SelectItem>
@@ -187,7 +187,7 @@ const SearchOrganization = () => {
                   <SelectValue placeholder="District" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Districts</SelectItem>
+                  <SelectItem value="all_districts">All Districts</SelectItem>
                   <SelectItem value="Central Delhi">Central Delhi</SelectItem>
                   <SelectItem value="Mumbai Suburban">Mumbai Suburban</SelectItem>
                   <SelectItem value="Bangalore Urban">Bangalore Urban</SelectItem>
