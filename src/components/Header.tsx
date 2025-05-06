@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText, MapPin, ChartBar, Database, Eye, Settings, File as FileIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu,
@@ -74,6 +74,46 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 rounded-md">
+                  Modules <ChevronDown size={16} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center">
+                <DropdownMenuItem asChild>
+                  <NavLink to="/dashboard" className="cursor-pointer flex items-center gap-2">
+                    <Settings size={16} /> Dashboard
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink to="/project-proposal" className="cursor-pointer flex items-center gap-2">
+                    <FileText size={16} /> Project Proposal
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink to="/project-mapping" className="cursor-pointer flex items-center gap-2">
+                    <MapPin size={16} /> Project Mapping
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink to="/monitoring" className="cursor-pointer flex items-center gap-2">
+                    <ChartBar size={16} /> Monitoring
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink to="/mis-reports" className="cursor-pointer flex items-center gap-2">
+                    <Database size={16} /> MIS Reports
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink to="/public-dashboard" className="cursor-pointer flex items-center gap-2">
+                    <Eye size={16} /> Public Dashboard
+                  </NavLink>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <NavItem to="/search-organization">Search Organization</NavItem>
             <NavItem to="/state-programs">State Programs</NavItem>
           </nav>
@@ -106,6 +146,15 @@ const Header = () => {
             <NavItem to="/mission-saksham">Mission Saksham</NavItem>
             <NavItem to="/search-organization">Search Organization</NavItem>
             <NavItem to="/state-programs">State Programs</NavItem>
+            <div className="pt-2 border-t">
+              <h3 className="px-4 py-2 text-sm font-semibold text-muted-foreground">Functional Modules</h3>
+              <NavItem to="/dashboard">Dashboard</NavItem>
+              <NavItem to="/project-proposal">Project Proposal</NavItem>
+              <NavItem to="/project-mapping">Project Mapping</NavItem>
+              <NavItem to="/monitoring">Monitoring</NavItem>
+              <NavItem to="/mis-reports">MIS Reports</NavItem>
+              <NavItem to="/public-dashboard">Public Dashboard</NavItem>
+            </div>
           </nav>
         </div>
       )}

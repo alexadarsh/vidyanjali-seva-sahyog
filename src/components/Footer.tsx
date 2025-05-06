@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-muted mt-12">
       <div className="container mx-auto py-8 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">PANKHUDI</h3>
             <p className="text-sm text-muted-foreground">
@@ -58,6 +58,42 @@ const Footer = () => {
               <li>
                 <NavLink to="/mission-saksham" className="text-sm text-muted-foreground hover:text-saksham transition-colors">
                   Mission Saksham
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-bold text-lg mb-4">Functional Modules</h3>
+            <ul className="space-y-2">
+              <li>
+                <NavLink to="/dashboard" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Dashboard
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/project-proposal" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Project Proposal
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/project-mapping" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Project Mapping
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/monitoring" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Monitoring
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/mis-reports" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  MIS Reports
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/public-dashboard" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Public Dashboard
                 </NavLink>
               </li>
             </ul>

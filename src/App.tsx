@@ -19,6 +19,12 @@ import AllRequests from "./pages/AllRequests";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
+import ProjectProposal from "./pages/ProjectProposal";
+import ProjectMapping from "./pages/ProjectMapping";
+import Monitoring from "./pages/Monitoring";
+import MISReports from "./pages/MISReports";
+import PublicDashboard from "./pages/PublicDashboard";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +49,12 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/project-proposal" element={<ProjectProposal />} />
+          <Route path="/project-mapping" element={<ProjectMapping />} />
+          <Route path="/monitoring" element={<Monitoring />} />
+          <Route path="/mis-reports" element={<MISReports />} />
+          <Route path="/public-dashboard" element={<PublicDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

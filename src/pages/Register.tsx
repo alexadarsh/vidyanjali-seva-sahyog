@@ -6,8 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
+import { FileText, Upload } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const Register = () => {
   return (
@@ -20,14 +22,15 @@ const Register = () => {
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl font-bold text-center">Create an Account</CardTitle>
               <CardDescription className="text-center">
-                Join Vidyanjali Seva Sahyog to start contributing
+                Join PANKHUDI to start contributing
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Tabs defaultValue="organization" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-6">
+                <TabsList className="grid w-full grid-cols-3 mb-6">
                   <TabsTrigger value="organization">Organization</TabsTrigger>
-                  <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
+                  <TabsTrigger value="csr">CSR Entity</TabsTrigger>
+                  <TabsTrigger value="ngo">NGO/Partner</TabsTrigger>
                 </TabsList>
                 
                 <TabsContent value="organization" className="space-y-4">
@@ -62,30 +65,111 @@ const Register = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="volunteer" className="space-y-4">
+                <TabsContent value="csr" className="space-y-4">
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="first-name">First Name</Label>
-                        <Input id="first-name" placeholder="Enter your first name" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="last-name">Last Name</Label>
-                        <Input id="last-name" placeholder="Enter your last name" />
-                      </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="csr-name">CSR Entity Name</Label>
+                      <Input id="csr-name" placeholder="Enter company/entity name" />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="Enter your email address" />
+                      <Label htmlFor="cin">Corporate Identity Number (CIN)</Label>
+                      <Input id="cin" placeholder="Enter CIN" />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="mobile">Mobile Number</Label>
-                      <Input id="mobile" type="tel" placeholder="10-digit mobile number" />
+                      <Label htmlFor="csr-email">Email</Label>
+                      <Input id="csr-email" type="email" placeholder="Enter official email address" />
                     </div>
                     
-                    <Button className="w-full">Register as Volunteer</Button>
+                    <div className="space-y-2">
+                      <Label htmlFor="csr-mobile">Mobile Number</Label>
+                      <Input id="csr-mobile" type="tel" placeholder="10-digit mobile number" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label>Upload Documents</Label>
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between p-3 border rounded-md">
+                          <div className="flex items-center gap-2">
+                            <FileText size={18} className="text-muted-foreground" />
+                            <span className="text-sm">CSR Certificate</span>
+                          </div>
+                          <Button size="sm" variant="outline" className="flex items-center gap-1">
+                            <Upload size={14} />
+                            <span>Upload</span>
+                          </Button>
+                        </div>
+                        
+                        <div className="flex items-center justify-between p-3 border rounded-md">
+                          <div className="flex items-center gap-2">
+                            <FileText size={18} className="text-muted-foreground" />
+                            <span className="text-sm">CSR-1 Form</span>
+                          </div>
+                          <Button size="sm" variant="outline" className="flex items-center gap-1">
+                            <Upload size={14} />
+                            <span>Upload</span>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full">Register CSR Entity</Button>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="ngo" className="space-y-4">
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="ngo-name">NGO/Implementing Partner Name</Label>
+                      <Input id="ngo-name" placeholder="Enter organization name" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="ngo-type">Organization Type</Label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select organization type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="ngo">NGO</SelectItem>
+                          <SelectItem value="trust">Trust</SelectItem>
+                          <SelectItem value="section8">Section 8 Company</SelectItem>
+                          <SelectItem value="society">Society</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="reg-number">Registration Number</Label>
+                      <Input id="reg-number" placeholder="Enter registration number" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="ngo-email">Email</Label>
+                      <Input id="ngo-email" type="email" placeholder="Enter official email address" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="ngo-mobile">Mobile Number</Label>
+                      <Input id="ngo-mobile" type="tel" placeholder="10-digit mobile number" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label>Upload Documents</Label>
+                      <div className="flex items-center justify-between p-3 border rounded-md">
+                        <div className="flex items-center gap-2">
+                          <FileText size={18} className="text-muted-foreground" />
+                          <span className="text-sm">Registration Certificate</span>
+                        </div>
+                        <Button size="sm" variant="outline" className="flex items-center gap-1">
+                          <Upload size={14} />
+                          <span>Upload</span>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full">Register as Partner</Button>
                   </div>
                 </TabsContent>
               </Tabs>
