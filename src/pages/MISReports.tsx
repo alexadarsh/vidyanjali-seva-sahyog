@@ -10,6 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Database, FileText, Mail, Calendar, Download, ChartBar, Filter, ChevronDown } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Badge } from '@/components/ui/badge';
 
 const MISReports = () => {
   return (
