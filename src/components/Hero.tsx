@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="container relative z-10 py-16 md:py-24 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 md:pr-8 text-center md:text-left animate-fade-in">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Empowering Communities Through <span className="text-primary">Vidyanjali Seva Sahyog</span>
+            Empowering Communities Through <span className="text-primary">PANKHUDI</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Join the initiative by the Ministry of Women and Child Development to strengthen 

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Vidyanjali Seva Sahyog</h3>
+            <h3 className="font-bold text-lg mb-4">PANKHUDI</h3>
             <p className="text-sm text-muted-foreground">
               An initiative by the Ministry of Women and Child Development, 
               Government of India to strengthen support systems through community 
@@ -25,8 +25,8 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about-vidyanjali" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About Vidyanjali
+                <NavLink to="/about-pankhudi" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  About PANKHUDI
                 </NavLink>
               </li>
               <li>

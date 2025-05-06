@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useNavigate } from 'react-router-dom';
 
 // Mock data for recent requests
 const serviceRequests = [
@@ -67,6 +68,8 @@ const materialRequests = [
 ];
 
 const RequestCard = ({ request, type }: { request: any, type: 'service' | 'material' }) => {
+  const navigate = useNavigate();
+  
   const getCategoryColor = (category: string) => {
     switch(category) {
       case 'Mission Shakti': return 'bg-purple-100 text-purple-800';
@@ -74,6 +77,10 @@ const RequestCard = ({ request, type }: { request: any, type: 'service' | 'mater
       case 'Mission Saksham': return 'bg-orange-100 text-orange-800';
       default: return 'bg-gray-100 text-gray-800';
     }
+  };
+
+  const handleViewDetails = () => {
+    navigate(`/request/${request.id}`, { state: { request, type } });
   };
 
   return (
@@ -105,13 +112,19 @@ const RequestCard = ({ request, type }: { request: any, type: 'service' | 'mater
           </div>
         )}
         
-        <Button className="w-full mt-4">View Details</Button>
+        <Button className="w-full mt-4" onClick={handleViewDetails}>View Details</Button>
       </CardContent>
     </Card>
   );
 };
 
 const RecentRequests = () => {
+  const navigate = useNavigate();
+
+  const handleViewAll = () => {
+    navigate('/all-requests');
+  };
+  
   return (
     <section className="bg-muted py-12 md:py-16">
       <div className="container">
@@ -148,7 +161,7 @@ const RecentRequests = () => {
         </Tabs>
         
         <div className="flex justify-center mt-8">
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" onClick={handleViewAll}>
             View All Requests
           </Button>
         </div>

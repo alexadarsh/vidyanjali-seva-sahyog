@@ -41,10 +41,10 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <NavLink to="/" className="text-xl font-bold flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-r from-shakti to-vatsalya">
-              <span className="text-white font-bold">VS</span>
+              <span className="text-white font-bold">PK</span>
             </div>
-            <span className="hidden sm:inline-block">Vidyanjali Seva Sahyog</span>
-            <span className="inline-block sm:hidden">VSS</span>
+            <span className="hidden sm:inline-block">PANKHUDI</span>
+            <span className="inline-block sm:hidden">PK</span>
           </NavLink>
         </div>
         
@@ -60,7 +60,7 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center">
                 <DropdownMenuItem asChild>
-                  <NavLink to="/about-vidyanjali" className="cursor-pointer">About Vidyanjali</NavLink>
+                  <NavLink to="/about-pankhudi" className="cursor-pointer">About PANKHUDI</NavLink>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <NavLink to="/mission-shakti" className="cursor-pointer">Mission Shakti</NavLink>
@@ -100,7 +100,7 @@ const Header = () => {
         <div className="fixed inset-0 top-16 z-50 bg-background border-t">
           <nav className="flex flex-col p-4 space-y-3">
             <NavItem to="/">Home</NavItem>
-            <NavItem to="/about-vidyanjali">About Vidyanjali</NavItem>
+            <NavItem to="/about-pankhudi">About PANKHUDI</NavItem>
             <NavItem to="/mission-shakti">Mission Shakti</NavItem>
             <NavItem to="/mission-vatsalya">Mission Vatsalya</NavItem>
             <NavItem to="/mission-saksham">Mission Saksham</NavItem>
